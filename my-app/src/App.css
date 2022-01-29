@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Greeting */
+body {
+  margin: 20px;
+  font: 1.5rem/1.5 Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  color: #2c3e50;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.listItem {
+  margin-bottom: 6px;
+}
+
+.addMessageControl {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(320px, 90vw, 480px);
+  margin: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(40 40 40 / 55%);
+  padding: 1em;
+  font-size: 1rem;
+  background: rgba(255 255 255 / 35%);
+  backdrop-filter: blur(4px);
+}
+
+.addMessageControl[draggable='true'] {
+  cursor: grab;
+}
+
+.addMessageControl[draggable='true']:active {
+  cursor: grabbing;
+}
+
+.addMessageControl label {
+  position: absolute;
+  top: -14px;
+  padding: 0.1em 0.2em 0 0.2em;
+  background: #fff;
+}
+
+.addMessageControl input {
+  flex: 1;
+  border: 1px solid rgba(30 30 30 / 30%);
+  padding: 0.6em 0.6em;
+  background: rgba(255 255 255 / 5%);
+  backdrop-filter: blur(4px);
+}
+
+.addMessageControl button {
+  cursor: pointer;
+  padding: 0.6em 0.6em;
+}
